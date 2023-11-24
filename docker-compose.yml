@@ -1,0 +1,9 @@
+services:
+  dns:
+    image: "versioned-dns:0.1.0"
+    build:
+      context: ./
+      target: production
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
