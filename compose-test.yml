@@ -1,0 +1,25 @@
+services:
+  dns:
+    image: "dnsmasq-dns:0.1.0"
+    build:
+      context: ./
+      target: production
+    networks:
+      dns_test_net:
+        ipv4_address: 172.16.210.10
+  test:
+    build:
+      context: ./
+      target: test
+    networks:
+      dns_test_net:
+        ipv4_address: 172.16.210.11
+    depends_on:
+      - dns
+networks:
+  dns_test_net:
+    driver: ipvlan
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.210.0/28"

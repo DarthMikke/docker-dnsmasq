@@ -14,3 +14,8 @@ FROM base AS production
 EXPOSE 53
 
 CMD /entrypoint.sh
+
+
+FROM base AS test
+
+CMD /test.sh
