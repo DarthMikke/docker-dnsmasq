@@ -1,6 +1,6 @@
 FROM debian:12 as base
 
-RUN apt update && apt install -y dnsmasq bind9-dnsutils
+RUN apt update && apt install -y git dnsmasq bind9-dnsutils
 
 RUN echo "addn-hosts=/srv/hosts" >> /etc/dnsmasq.conf
 COPY hosts /srv/
