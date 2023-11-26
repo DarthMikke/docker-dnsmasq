@@ -6,6 +6,7 @@ if [ $GIT_PATH ]; then
 		cd /srv
 		git pull
 	else
+		rm -r /srv/*
 		git clone $GIT_PATH /srv
 	fi
 else
