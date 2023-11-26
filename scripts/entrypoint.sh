@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $GIT_PATH ]; do
+if [ $GIT_PATH ]; then
 	echo "Syncing from Git"
 	if [ -d /srv/.git ]; then
 		cd /srv
