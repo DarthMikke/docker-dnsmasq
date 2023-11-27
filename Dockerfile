@@ -5,7 +5,7 @@ RUN apt update && apt install -y git dnsmasq bind9-dnsutils
 RUN echo "addn-hosts=/srv/hosts" >> /etc/dnsmasq.conf
 COPY hosts /srv/
 
-COPY scripts/ /
+COPY entrypoints/ /
 RUN chmod +x /*.sh
 
 
