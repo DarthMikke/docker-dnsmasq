@@ -1,6 +1,6 @@
 services:
   dns:
-    image: "versioned-dns:0.1.0"
+    image: "versioned-dns:1.0.0"
     build:
       context: ./
       target: production
