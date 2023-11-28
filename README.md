@@ -13,3 +13,15 @@ There are two ways to provide DNS records:
 1. Pass environment variable `GIT_PATH` containing the full path to the
 Git repository.
 2. Mount a folder containing a file called `hosts` as `/srv` in the container.
+
+## Scripts
+
+There are several lifetime scripts provided in the `scripts` directory:
+
+- `build` - only build the container
+- `test` - run the test setup
+- `start` - start the container in the background without building
+- `stop` - remove the container
+- `restart` - `stop`, then `start`
+
+Depending on your Docker setup, you might have to run them as sudo.
