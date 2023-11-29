@@ -1,0 +1,17 @@
+#!/bin/bash
+
+scripts/start || exit $?
+
+# Find available networks with `networksetup -listallnetworkservices`
+NETWORK="Wi-Fi"
+
+echo ${NETWORK} > .macoslock
+
+# @link https://superuser.com/questions/1749552/change-primary-dns-server-from-cli-terminal-macos-monterey
+
+sudo networksetup -setdnsservers ${NETWORK} empty
+sudo networksetup -setdnsservers ${NETWORK} 127.0.0.1
+
+sudo killall -HUP mDNSResponder
+sleep 2
+echo macOS DNS Cache Reset
