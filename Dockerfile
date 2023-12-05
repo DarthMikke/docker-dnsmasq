@@ -3,6 +3,7 @@ FROM debian:12 as base
 RUN apt update && apt install -y git dnsmasq bind9-dnsutils
 
 RUN echo "addn-hosts=/srv/hosts" >> /etc/dnsmasq.conf
+RUN echo "server=1.1.1.1" >> /etc/dnsmasq.conf
 COPY hosts /srv/
 
 COPY entrypoints/ /
