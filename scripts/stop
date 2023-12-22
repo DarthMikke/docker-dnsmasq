@@ -12,6 +12,7 @@ rm .macoslock
 
 # @link https://apple.stackexchange.com/questions/288960/after-using-networksetup-setdnsservers-wi-fi-8-8-8-8-8-8-4-4-how-do-i-cle
 
+sudo dscacheutil -flushcache
 sudo killall -HUP mDNSResponder
 sleep 2
 echo macOS DNS Cache Reset
