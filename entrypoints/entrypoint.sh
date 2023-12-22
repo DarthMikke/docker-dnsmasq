@@ -13,5 +13,9 @@ else
 	echo "Environment variable GIT_PATH is not defined, not syncing from Git."
 fi
 
+if [ ! -d /srv/dnsmasq.d ]; then
+	mkdir -p /srv/dnsmasq.d
+fi
+
 echo "Starting dnsmasq"
 dnsmasq -k
