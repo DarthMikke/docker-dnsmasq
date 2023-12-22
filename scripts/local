@@ -9,9 +9,11 @@ echo ${NETWORK} > .macoslock
 
 # @link https://superuser.com/questions/1749552/change-primary-dns-server-from-cli-terminal-macos-monterey
 
+echo "Setting DNS server for ${NETWORK}"
 networksetup -setdnsservers ${NETWORK} empty
 networksetup -setdnsservers ${NETWORK} 127.0.0.1
 
+echo "Enter your password to flush DNS cache:"
 sudo killall -HUP mDNSResponder
 sleep 2
 echo macOS DNS Cache Reset
