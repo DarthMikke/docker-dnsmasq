@@ -6,7 +6,7 @@ if [ ! -f .macoslock ]; then
 exit
 fi
 
-networksetup -setdhcp $(cat .macoslock)
+networksetup -setdnsservers $(cat .macoslock) empty
 
 rm .macoslock
 
