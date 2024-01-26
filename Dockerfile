@@ -6,7 +6,7 @@ RUN mkdir -p /srv/dnsmasq.d
 COPY hosts /srv/
 RUN echo "no-resolv" >> /etc/dnsmasq.conf
 RUN echo "addn-hosts=/srv/hosts" >> /etc/dnsmasq.conf
-RUN echo "conf-dir=/srv/dnsmasq.d" >> /etc/dnsmasq.conf
+RUN echo "conf-dir=/srv/dnsmasq.d,*.conf" >> /etc/dnsmasq.conf
 RUN echo "server=1.1.1.1" >> /srv/dnsmasq.d/usptream.conf
 
 COPY entrypoints/ /
