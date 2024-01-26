@@ -1,3 +1,12 @@
+## [v1.2.1] - 2024-01-26
+
+### Fixed
+- Disregard Docker's resolv.conf to avoid DNS resolution loops.
+
+### Changed
+- Only include .conf files from /srv/dnsmasq.d.
+
+
 ## [v1.2.0] - 2023-12-22
 
 ### Added
