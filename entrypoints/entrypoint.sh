@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ $GIT_PATH ]; then
+if [ -z $GIT_PATH && -z "$( ls -A /srv )" ]; then
 	echo "Syncing from Git"
 	if [ -d /srv/.git ]; then
 		cd /srv
 		git pull
 	else
-		rm -r /srv/*
+		rm -r /srv
 		git clone $GIT_PATH /srv
 	fi
 else

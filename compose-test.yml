@@ -1,6 +1,6 @@
 services:
   dns:
-    image: "dnsmasq-dns:1.2.1"
+    image: "dnsmasq-dns:1.2.2"
     build:
       context: ./
       target: production
@@ -8,7 +8,7 @@ services:
       dns_test_net:
         ipv4_address: 172.16.210.10
   test:
-    image: "dnsmasq-dns:1.2.1"
+    image: "dnsmasq-dns:1.2.2"
     build:
       context: ./
       target: test

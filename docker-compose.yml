@@ -1,6 +1,6 @@
 services:
   dns:
-    image: "versioned-dns:1.2.0"
+    image: "versioned-dns:1.2.2"
     container_name: dnsmasq
     build:
       context: ./

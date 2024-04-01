@@ -1,3 +1,9 @@
+## [v1.2.2] - 2024-04-01
+
+### Changed
+- Do not try to overwrite the `/srv/` directory with Git-ed config.
+
+
 ## [v1.2.1] - 2024-01-26
 
 ### Fixed
@@ -16,6 +22,7 @@
 - Moved additional configuration to /srv/dnsmasq.d, so that the configuration
   can be more flexible.
 - Nicer container names.
+
 
 ## [v1.1.0] - 2023-12-05
 
