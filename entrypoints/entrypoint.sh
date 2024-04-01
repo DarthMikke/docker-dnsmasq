@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z $GIT_PATH && -z "$( ls -A /srv )" ]; then
+if [ -z $GIT_PATH ] && [ -z "$( ls -A /srv )" ]; then
 	echo "Syncing from Git"
 	if [ -d /srv/.git ]; then
 		cd /srv
